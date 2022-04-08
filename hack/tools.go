@@ -7,6 +7,7 @@
 package hack
 
 import (
+	_ "github.com/arttor/helmify/cmd/helmify"
 	_ "honnef.co/go/tools/cmd/staticcheck"
 	_ "sigs.k8s.io/controller-tools/cmd/controller-gen"
 )

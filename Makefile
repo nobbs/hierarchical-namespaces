@@ -82,6 +82,8 @@ CONTROLLER_GEN ?= ${CURDIR}/bin/controller-gen
 
 STATICCHECK ?= ${CURDIR}/bin/staticcheck
 
+HELMIFY ?= ${CURDIR}/bin/helmify
+
 # Get the currently used golang install path (in GOPATH/bin, unless GOBIN is set)
 GOBIN ?= $(shell go env GOPATH)/bin
 
@@ -186,6 +188,12 @@ manifests: controller-gen
 	@cat manifests/nowebhooks-cc.yaml > manifests/ha.yaml
 	@echo "---" >> manifests/ha.yaml
 	@cat manifests/ha-webhooks-cc.yaml >> manifests/ha.yaml
+
+helm: manifests
+	@cat manifests/default.yaml | $(HELMIFY)
+
+build-helmify:
+	go build -o $(HELMIFY) github.com/arttor/helmify/cmd/helmify
 
 # Run go fmt against code
 fmt:

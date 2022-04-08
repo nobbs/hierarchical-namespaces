@@ -1,0 +1,24 @@
+controllerManager:
+  manager:
+    image:
+      repository: hnc-manager
+      tag: latest
+    resources:
+      limits:
+        cpu: 100m
+        memory: 300Mi
+      requests:
+        cpu: 100m
+        memory: 150Mi
+  replicas: 1
+metricsService:
+  ports:
+  - name: https
+    port: 8443
+    targetPort: https
+  type: ClusterIP
+webhookService:
+  ports:
+  - port: 443
+    targetPort: 9443
+  type: ClusterIP

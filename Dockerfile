@@ -1,5 +1,5 @@
 # Build the manager binary
-FROM golang:1.17 as builder
+FROM docker-remote.artifacts.ruv.de/golang:1.17 as builder
 
 WORKDIR /workspace
 # Copy the Go Modules manifests and all third-party libraries that are unlikely to change frequently
@@ -19,7 +19,7 @@ RUN CGO_ENABLED=0 GO111MODULE=on go build -a -o manager ./cmd/manager/main.go
 # https://github.com/kubernetes-sigs/kubebuilder/blob/7af89cb00c224c57ece37dc14ea37caf1eb769db/pkg/scaffold/v2/dockerfile.go#L60
 # Use distroless as minimal base image to package the manager binary
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
-FROM gcr.io/distroless/static:nonroot
+FROM docker-remote-gcr-io.artifacts.ruv.de/distroless/static:nonroot
 WORKDIR /
 COPY --from=builder /workspace/manager .
 USER nonroot:nonroot

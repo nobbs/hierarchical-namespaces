@@ -40,6 +40,25 @@ github.com/PuerkitoBio/purell
 # github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
 ## explicit
 github.com/PuerkitoBio/urlesc
+# github.com/arttor/helmify v0.3.8
+## explicit; go 1.17
+github.com/arttor/helmify/cmd/helmify
+github.com/arttor/helmify/pkg/app
+github.com/arttor/helmify/pkg/config
+github.com/arttor/helmify/pkg/decoder
+github.com/arttor/helmify/pkg/helm
+github.com/arttor/helmify/pkg/helmify
+github.com/arttor/helmify/pkg/metadata
+github.com/arttor/helmify/pkg/processor
+github.com/arttor/helmify/pkg/processor/configmap
+github.com/arttor/helmify/pkg/processor/crd
+github.com/arttor/helmify/pkg/processor/deployment
+github.com/arttor/helmify/pkg/processor/rbac
+github.com/arttor/helmify/pkg/processor/secret
+github.com/arttor/helmify/pkg/processor/service
+github.com/arttor/helmify/pkg/processor/storage
+github.com/arttor/helmify/pkg/processor/webhook
+github.com/arttor/helmify/pkg/yaml
 # github.com/aws/aws-sdk-go v1.23.20
 ## explicit
 github.com/aws/aws-sdk-go/aws
@@ -159,7 +178,7 @@ github.com/google/gofuzz
 # github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 ## explicit; go 1.13
 github.com/google/shlex
-# github.com/google/uuid v1.1.2
+# github.com/google/uuid v1.2.0
 ## explicit
 github.com/google/uuid
 # github.com/googleapis/gax-go/v2 v2.0.5
@@ -175,6 +194,9 @@ github.com/googleapis/gnostic/openapiv2
 ## explicit
 github.com/gregjones/httpcache
 github.com/gregjones/httpcache/diskcache
+# github.com/iancoleman/strcase v0.2.0
+## explicit; go 1.16
+github.com/iancoleman/strcase
 # github.com/imdario/mergo v0.3.12
 ## explicit; go 1.13
 github.com/imdario/mergo
@@ -275,6 +297,9 @@ github.com/prometheus/procfs/internal/util
 ## explicit; go 1.13
 github.com/prometheus/statsd_exporter/pkg/mapper
 github.com/prometheus/statsd_exporter/pkg/mapper/fsm
+# github.com/sirupsen/logrus v1.8.1
+## explicit; go 1.13
+github.com/sirupsen/logrus
 # github.com/spf13/cobra v1.2.1
 ## explicit; go 1.14
 github.com/spf13/cobra
@@ -700,6 +725,7 @@ k8s.io/apimachinery/pkg/runtime/serializer/protobuf
 k8s.io/apimachinery/pkg/runtime/serializer/recognizer
 k8s.io/apimachinery/pkg/runtime/serializer/streaming
 k8s.io/apimachinery/pkg/runtime/serializer/versioning
+k8s.io/apimachinery/pkg/runtime/serializer/yaml
 k8s.io/apimachinery/pkg/selection
 k8s.io/apimachinery/pkg/types
 k8s.io/apimachinery/pkg/util/cache
